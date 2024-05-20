@@ -35,7 +35,7 @@ app.get('/orders', async (req, res) => {
   }
 });
 
-app.post('/newOrders', async (req, res) => {
+app.post('/new-orders', async (req, res) => {
   const currentDate = new Date().toISOString();
   req.body.date = currentDate;
 

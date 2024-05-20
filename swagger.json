@@ -32,7 +32,7 @@
         }
       }
     },
-    "/newOrders": {
+    "/new-orders": {
       "post": {
         "summary": "Create a new order",
         "description": "Endpoint to create a new order in the database. The 'date' property will be automatically set to the current date and time by the server.",
