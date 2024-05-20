@@ -1,9 +1,9 @@
 const cors = require("cors");
 const express = require('express');
-const Order = require('./models/orders');
+const Order = require('./src/models/orders');
 const swaggerUi = require('swagger-ui-express');
 const { default: mongoose } = require('mongoose');
-const swaggerDocument = require('../swagger.json');
+const swaggerDocument = require('./swagger.json');
 
 const app = express();
 
