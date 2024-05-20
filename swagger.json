@@ -8,8 +8,8 @@
   "host": "origination-api-692b721ce1ef.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/orders": {
