@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "API Documentation for Orders"
   },
-  "host": "localhost:8080",
+  "host": "https://origination-api-692b721ce1ef.herokuapp.com/",
   "basePath": "/",
   "schemes": [
     "http",
