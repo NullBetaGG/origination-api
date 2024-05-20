@@ -1,0 +1,120 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Orders API",
+    "version": "1.0.0",
+    "description": "API Documentation for Orders"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/orders": {
+      "get": {
+        "summary": "Retrieve all orders",
+        "description": "Endpoint to retrieve all orders from the database.",
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved orders",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Order"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/newOrders": {
+      "post": {
+        "summary": "Create a new order",
+        "description": "Endpoint to create a new order in the database. The 'date' property will be automatically set to the current date and time by the server.",
+        "parameters": [
+          {
+            "name": "order",
+            "in": "body",
+            "description": "Order data in JSON format",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Order"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Order successfully created"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Order": {
+      "type": "object",
+      "required": [
+        "user",
+        "volume",
+        "unit",
+        "price",
+        "product",
+        "city",
+        "state",
+        "type"
+      ],
+      "properties": {
+        "user": {
+          "type": "string",
+          "description": "User who placed the order"
+        },
+        "volume": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Volume of the order"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of the volume"
+        },
+        "price": {
+          "type": "number",
+          "format": "double",
+          "description": "Price of the order"
+        },
+        "product": {
+          "type": "string",
+          "description": "Product being ordered"
+        },
+        "city": {
+          "type": "string",
+          "description": "City where the order is placed"
+        },
+        "state": {
+          "type": "string",
+          "description": "State where the order is placed"
+        },
+        "supplier": {
+          "type": "string",
+          "description": "Supplier of the product",
+          "default": ""
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the order"
+        }
+      }
+    }
+  }
+}
