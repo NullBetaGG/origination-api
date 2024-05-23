@@ -14,6 +14,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const port = process.env.PORT || 8080;
 
+//TODO: Refazer uma API apenas para dados de cidades e estados brasileiros
+//Conexão em dois bancos diferentes, de Cidades e de Ordens
 const ordersConnection = mongoose.createConnection(process.env.MONGO_URI_ORDERS);
 const Order = ordersConnection.model('Order', require('./src/models/orders').schema);
 
