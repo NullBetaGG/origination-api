@@ -10,7 +10,8 @@ const orderSchema = new mongoose.Schema({
   state: { type: String, required: true },
   date: { type: Date, required: true },
   supplier: { type: String, required: false },
-  type: { type: String, required: true }
+  type: { type: String, required: true },
+  ibge_code: { type: Number, required: true }
 });
 
 const Order = mongoose.model('Order', orderSchema);

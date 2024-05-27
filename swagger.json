@@ -121,7 +121,8 @@
         "product",
         "city",
         "state",
-        "type"
+        "type",
+        "ibge_code"
       ],
       "properties": {
         "user": {
@@ -162,6 +163,10 @@
         "type": {
           "type": "string",
           "description": "Type of the order"
+        },
+        "ibge_code": {
+          "type": "number",
+          "description": "Ibge code of city "
         }
       }
     },
