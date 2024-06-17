@@ -122,7 +122,8 @@
         "city",
         "state",
         "type",
-        "ibge_code"
+        "ibge_code",
+        "new_price"
       ],
       "properties": {
         "user": {
@@ -167,6 +168,10 @@
         "ibge_code": {
           "type": "number",
           "description": "Ibge code of city "
+        },
+        "new_price": {
+          "type": "string",
+          "description": "New price of demand"
         }
       }
     },

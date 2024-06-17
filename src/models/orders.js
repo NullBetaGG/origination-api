@@ -11,7 +11,8 @@ const orderSchema = new mongoose.Schema({
   date: { type: Date, required: true },
   supplier: { type: String, required: false },
   type: { type: String, required: true },
-  ibge_code: { type: Number, required: true }
+  ibge_code: { type: Number, required: true },
+  new_price: { type: String, required: true }
 });
 
 const Order = mongoose.model('Order', orderSchema);
