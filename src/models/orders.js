@@ -12,7 +12,8 @@ const orderSchema = new mongoose.Schema({
   supplier: { type: String, required: false },
   type: { type: String, required: true },
   ibge_code: { type: Number, required: true },
-  new_price: { type: String, required: false }
+  new_price: { type: String, required: false },
+  boarding_limit: { type: String, required: true }
 });
 
 const Order = mongoose.model('Order', orderSchema);

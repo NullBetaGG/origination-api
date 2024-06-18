@@ -123,7 +123,8 @@
         "state",
         "type",
         "ibge_code",
-        "new_price"
+        "new_price",
+        "boarding_limit"
       ],
       "properties": {
         "user": {
@@ -172,6 +173,10 @@
         "new_price": {
           "type": "string",
           "description": "New price of demand"
+        },
+        "boarding_limit": {
+          "type": "string",
+          "description": "Boarding limit of demand"
         }
       }
     },

@@ -36,7 +36,7 @@ app.get('/orders', async (req, res) => {
 });
 
 app.post('/new-orders', async (req, res) => {
-  const { user, volume, unit, price, product, city, state, type, ibge_code, supplier } = req.body;
+  const { user, volume, unit, price, product, city, state, type, ibge_code, supplier, boarding_limit } = req.body;
 
   const errors = [];
   if (!user) errors.push("Insira o nome do usuário");
@@ -47,6 +47,7 @@ app.post('/new-orders', async (req, res) => {
   if (!city) errors.push("Selecione uma cidade");
   if (!state) errors.push("State is required");
   if (!type) errors.push("Escolha um tipo");
+  if (!boarding_limit) errors.push("Escolha limite de embarque");
   if (ibge_code === undefined) errors.push("IBGE code is required");
 
   if (type === 'oferta' && !supplier) errors.push("É necessário adicionar um fornecedor caso seja uma Oferta");
