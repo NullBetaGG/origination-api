@@ -13,7 +13,8 @@ const orderSchema = new mongoose.Schema({
   type: { type: String, required: true },
   ibge_code: { type: Number, required: true },
   new_price: { type: String, required: false },
-  boarding_limit: { type: String, required: true }
+  boarding_limit: { type: String, required: true },
+  observation: { type: String, required: false }
 });
 
 const Order = mongoose.model('Order', orderSchema);
